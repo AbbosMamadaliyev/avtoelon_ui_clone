@@ -15,24 +15,28 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Avtoelon'),
-        centerTitle: false,
-        leading: IconButton(
-          icon: Icon(Icons.menu),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.add)),
-          IconButton(
-              onPressed: () {
-                _showDialog();
-              },
-              icon: Icon(Icons.monetization_on_outlined)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-        ],
-      ),
+      appBar: _buildAppBar(),
       body: HomePageBody(),
+    );
+  }
+
+  AppBar _buildAppBar() {
+    return AppBar(
+      title: Text('Avtoelon'),
+      centerTitle: false,
+      leading: IconButton(
+        icon: Icon(Icons.menu),
+        onPressed: () {},
+      ),
+      actions: [
+        IconButton(onPressed: () {}, icon: Icon(Icons.add)),
+        IconButton(
+            onPressed: () {
+              _showDialog();
+            },
+            icon: Icon(Icons.monetization_on_outlined)),
+        IconButton(onPressed: () {}, icon: Icon(Icons.search)),
+      ],
     );
   }
 
@@ -41,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            content: Text('No money no honey )'),
+            content: Text('No money no honey )))'),
             actions: [
               TextButton(
                 onPressed: () {

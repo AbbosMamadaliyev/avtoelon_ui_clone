@@ -27,7 +27,7 @@ class _CostAndInfoState extends State<CostAndInfo> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            cost!,
+            '\$ ${cost!}',
             style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
           ),
           Text(
